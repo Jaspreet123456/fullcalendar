@@ -10,34 +10,33 @@ import { formatDate } from '@fullcalendar/core';
 const Calendar = () => {
   const calendarRef = useRef(null);
 
-  // Sample events with time and color
   const events = [
     {
       id: 1,
       title: 'Event 1',
       start: '2024-09-12T10:00:00',
       end: '2024-09-12T12:00:00',
-      backgroundColor: '#ff9f40', // Orange color
+      backgroundColor: '#ff9f40',
     },
     {
       id: 2,
       title: 'Event 2',
       start: '2024-09-12T13:00:00',
       end: '2024-09-12T15:00:00',
-      backgroundColor: '#007bff', // Blue color
+      backgroundColor: '#007bff',
     },
     {
       id: 3,
       title: 'Event 3',
       start: '2024-09-12T09:00:00',
       end: '2024-09-12T11:00:00',
-      backgroundColor: '#28a745', // Green color
+      backgroundColor: '#28a745',
     },
   ];
 
   const handleEventClick = (event) => {
     const calendarApi = calendarRef.current.getApi();
-    calendarApi.gotoDate(event.start); // Navigate to event's start date
+    calendarApi.gotoDate(event.start);
   };
 
   return (
